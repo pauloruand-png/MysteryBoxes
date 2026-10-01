@@ -1,0 +1,26 @@
+name: MysteryBoxes
+version: '1.0.0'
+main: com.mysterybox.MysteryBoxesPlugin
+api-version: '1.21'
+author: Antigravity
+description: Plugin completo de Caixas Misteriosas com Chaves para Minecraft 1.21.x
+
+commands:
+  caixa:
+    description: Comando principal do sistema de Caixas Misteriosas.
+    aliases: [mysterybox, crate, caixas, chaves]
+    usage: /caixa [ajuda]
+
+permissions:
+  mysteryboxes.use:
+    description: Permite usar comandos básicos de caixas misteriosas.
+    default: true
+  mysteryboxes.open:
+    description: Permite abrir caixas misteriosas no servidor.
+    default: true
+  mysteryboxes.preview:
+    description: Permite visualizar as recompensas de uma caixa misteriosa.
+    default: true
+  mysteryboxes.admin:
+    description: Permite gerenciar caixas, chaves, criar blocos de caixas e recarregar.
+    default: op

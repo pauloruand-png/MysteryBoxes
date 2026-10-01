@@ -1,0 +1,40 @@
+# ========================================================
+#       MysteryBoxes - Configuração Geral (v1.0.0)
+#       Compatível com Minecraft 1.21.x (Java 21)
+# ========================================================
+
+prefix: "&6&l[CAIXA]&r "
+
+# Configurações da Animação estilo Roleta (CS:GO)
+animation:
+  # Som tocado a cada passagem de item na roleta
+  tick-sound: "BLOCK_NOTE_BLOCK_PLING"
+  # Som tocado quando o jogador ganha o item final
+  win-sound: "UI_TOAST_CHALLENGE_COMPLETE"
+  # Tocar fogos de artifício no jogador ao ganhar
+  spawn-firework: true
+  # Partículas ao redor do bloco da caixa
+  ambient-particles: true
+
+# Mensagens do Plugin (Suporta códigos de cor '&' e '&#HEX')
+messages:
+  no-permission: "&cVocê não tem permissão para fazer isso."
+  need-key: "&cVocê precisa de uma %key% &cpara abrir esta caixa!"
+  left-click-preview: "&7Dica: Clique com o botão esquerdo para ver as recompensas."
+  opening: "&aGirando a roleta da caixa misteriosa... boa sorte!"
+  already-opening: "&cVocê já está abrindo uma caixa! Aguarde a animação finalizar."
+  reward-won: "&a&lPARABÉNS! &aVocê ganhou: %reward%&a!"
+  inventory-full-dropped: "&eSeu inventário estava cheio, sua recompensa caiu no chão!"
+  
+  # Comandos e Administração
+  key-given: "&aVocê enviou &e%amount%x %key% &apara &f%player%&a!"
+  key-received: "&aVocê recebeu &e%amount%x %key%&a!"
+  player-not-found: "&cJogador &e%player% &cnão foi encontrado."
+  invalid-crate: "&cCaixa &e%crate% &cnão foi encontrada. Use /caixa list para ver as caixas."
+  invalid-amount: "&cPor favor, informe uma quantidade numérica válida."
+  must-look-at-block: "&cVocê precisa estar olhando para um bloco para defini-lo como caixa!"
+  crate-set: "&aBloco definido com sucesso como &e%crate%&a!"
+  crate-removed: "&aCaixa misteriosa removida deste bloco com sucesso."
+  not-a-crate: "&cO bloco para o qual você está olhando não é uma caixa misteriosa."
+  cannot-break-crate: "&cVocê não pode quebrar uma Caixa Misteriosa! Use &e/caixa removecrate &cpara remover."
+  reload-success: "&aConfigurações e caixas recarregadas com sucesso!"

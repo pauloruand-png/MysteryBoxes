@@ -1,0 +1,256 @@
+# ========================================================
+#       MysteryBoxes - Definição de Caixas e Recompensas
+# ========================================================
+#
+# Formato de cada recompensa:
+#   chance: porcentagem/peso da recompensa na roleta
+#   display:
+#     material: MATERIAL (Item exibido na roleta e na prévia)
+#     amount: quantidade exibida
+#     name: "Nome Colorido"
+#     lore:
+#       - "Linha de descrição 1"
+#     enchantments:
+#       - "ENCHANTMENT_NAME:LEVEL"
+#     glowing: true/false (brilho de encantamento)
+#   items: (Itens físicos que o jogador receberá)
+#     - material: MATERIAL
+#       amount: quantidade
+#       name: "Nome Personalizado"
+#       enchantments:
+#         - "SHARPNESS:5"
+#   commands: (Comandos executados pelo console - placeholder %player%)
+#     - "eco give %player% 5000"
+#   broadcast: true/false (anunciar no servidor caso ganhe esta recompensa)
+#   broadcast-message: "&eO jogador &f%player% &eabriu uma &6Caixa &ee tirou &b%reward%&e!"
+
+crates:
+  comum:
+    name: "&a&lCaixa Comum"
+    key:
+      material: TRIPWIRE_HOOK
+      name: "&a&lChave Comum"
+      lore:
+        - "&7Use esta chave para abrir"
+        - "&7uma &aCaixa Comum&7!"
+        - ""
+        - "&eClique com o botão direito"
+        - "&ena caixa para abrir."
+      glowing: true
+    rewards:
+      ferro:
+        chance: 35.0
+        display:
+          material: IRON_INGOT
+          amount: 16
+          name: "&f16x Barra de Ferro"
+        items:
+          - material: IRON_INGOT
+            amount: 16
+      ouro:
+        chance: 25.0
+        display:
+          material: GOLD_INGOT
+          amount: 8
+          name: "&e8x Barra de Ouro"
+        items:
+          - material: GOLD_INGOT
+            amount: 8
+      diamante:
+        chance: 20.0
+        display:
+          material: DIAMOND
+          amount: 4
+          name: "&b4x Diamante"
+        items:
+          - material: DIAMOND
+            amount: 4
+      espada_ferro:
+        chance: 15.0
+        display:
+          material: IRON_SWORD
+          amount: 1
+          name: "&aEspada do Guerreiro"
+          enchantments:
+            - "SHARPNESS:2"
+            - "UNBREAKING:2"
+        items:
+          - material: IRON_SWORD
+            amount: 1
+            name: "&aEspada do Guerreiro"
+            enchantments:
+              - "SHARPNESS:2"
+              - "UNBREAKING:2"
+      maca_dourada:
+        chance: 5.0
+        display:
+          material: GOLDEN_APPLE
+          amount: 2
+          name: "&62x Maçã Dourada"
+        items:
+          - material: GOLDEN_APPLE
+            amount: 2
+
+  rara:
+    name: "&9&lCaixa Rara"
+    key:
+      material: AMETHYST_SHARD
+      name: "&9&lChave Rara"
+      lore:
+        - "&7Use esta chave para abrir"
+        - "&7uma &9Caixa Rara&7!"
+        - ""
+        - "&eClique com o botão direito"
+        - "&ena caixa para abrir."
+      glowing: true
+    rewards:
+      diamantes_raros:
+        chance: 35.0
+        display:
+          material: DIAMOND
+          amount: 16
+          name: "&b16x Diamantes"
+        items:
+          - material: DIAMOND
+            amount: 16
+      netherite_scrap:
+        chance: 25.0
+        display:
+          material: NETHERITE_SCRAP
+          amount: 3
+          name: "&83x Fragmento de Netherita"
+        items:
+          - material: NETHERITE_SCRAP
+            amount: 3
+      espada_diamante:
+        chance: 20.0
+        display:
+          material: DIAMOND_SWORD
+          amount: 1
+          name: "&9Lâmina Glacial"
+          enchantments:
+            - "SHARPNESS:4"
+            - "LOOTING:3"
+            - "UNBREAKING:3"
+        items:
+          - material: DIAMOND_SWORD
+            amount: 1
+            name: "&9Lâmina Glacial"
+            enchantments:
+              - "SHARPNESS:4"
+              - "LOOTING:3"
+              - "UNBREAKING:3"
+      macas_ouro:
+        chance: 15.0
+        display:
+          material: GOLDEN_APPLE
+          amount: 6
+          name: "&66x Maçãs Douradas"
+        items:
+          - material: GOLDEN_APPLE
+            amount: 6
+      elytra:
+        chance: 5.0
+        display:
+          material: ELYTRA
+          amount: 1
+          name: "&d&lAsas de Élitro"
+          enchantments:
+            - "UNBREAKING:3"
+            - "MENDING:1"
+        items:
+          - material: ELYTRA
+            amount: 1
+            name: "&d&lAsas de Élitro"
+            enchantments:
+              - "UNBREAKING:3"
+              - "MENDING:1"
+        broadcast: true
+        broadcast-message: "&6&l[CAIXA] &f%player% &eacabou de tirar um &d&lÉlitro &ena &9Caixa Rara&e!"
+
+  lendaria:
+    name: "&6&lCaixa Lendária"
+    key:
+      material: OMINOUS_TRIAL_KEY
+      name: "&6&lChave Lendária"
+      lore:
+        - "&7Use esta chave para abrir"
+        - "&7uma &6Caixa Lendária&7!"
+        - ""
+        - "&eClique com o botão direito"
+        - "&ena caixa para abrir."
+      glowing: true
+    rewards:
+      barra_netherite:
+        chance: 30.0
+        display:
+          material: NETHERITE_INGOT
+          amount: 4
+          name: "&84x Barras de Netherita"
+        items:
+          - material: NETHERITE_INGOT
+            amount: 4
+      maca_encantada:
+        chance: 25.0
+        display:
+          material: ENCHANTED_GOLDEN_APPLE
+          amount: 3
+          name: "&d3x Maçãs Douradas Encantadas"
+        items:
+          - material: ENCHANTED_GOLDEN_APPLE
+            amount: 3
+      picareta_suprema:
+        chance: 20.0
+        display:
+          material: NETHERITE_PICKAXE
+          amount: 1
+          name: "&6&lQuebradora de Mundos"
+          enchantments:
+            - "EFFICIENCY:5"
+            - "FORTUNE:3"
+            - "UNBREAKING:3"
+            - "MENDING:1"
+        items:
+          - material: NETHERITE_PICKAXE
+            amount: 1
+            name: "&6&lQuebradora de Mundos"
+            enchantments:
+              - "EFFICIENCY:5"
+              - "FORTUNE:3"
+              - "UNBREAKING:3"
+              - "MENDING:1"
+        broadcast: true
+        broadcast-message: "&6&l[CAIXA] &f%player% &etirou uma &6&lPicareta Suprema &ena &6Caixa Lendária&e!"
+      maca_121:
+        chance: 15.0
+        display:
+          material: MACE
+          amount: 1
+          name: "&c&lMaça Destruidora (1.21)"
+          enchantments:
+            - "DENSITY:4"
+            - "BREACH:4"
+            - "UNBREAKING:3"
+        items:
+          - material: MACE
+            amount: 1
+            name: "&c&lMaça Destruidora (1.21)"
+            enchantments:
+              - "DENSITY:4"
+              - "BREACH:4"
+              - "UNBREAKING:3"
+        broadcast: true
+        broadcast-message: "&6&l[CAIXA] &f%player% &egranhou uma lendária &c&lMaça (1.21)&e!"
+      premio_dinheiro:
+        chance: 10.0
+        display:
+          material: EMERALD_BLOCK
+          amount: 1
+          name: "&a&l100.000 Coins / XP Bônus"
+          lore:
+            - "&7Receba 100 níveis de experiência!"
+          glowing: true
+        commands:
+          - "xp add %player% 100 levels"
+        broadcast: true
+        broadcast-message: "&6&l[CAIXA] &f%player% &etirou o prêmio de &a&l100 Níveis de XP &ena &6Caixa Lendária&e!"
